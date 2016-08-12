@@ -1,0 +1,22 @@
+[hduser@acadgild root]$ start-all.sh
+Warning: $HADOOP_HOME is deprecated.
+
+starting namenode, logging to /usr/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hduser-namenode-acadgild.hadoop.com.out
+acadgild.hadoop.com: Warning: $HADOOP_HOME is deprecated.
+acadgild.hadoop.com:
+acadgild.hadoop.com: starting datanode, logging to /usr/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hduser-datanode-acadgild.hadoop.com.out
+acadgild.hadoop.com: Warning: $HADOOP_HOME is deprecated.
+acadgild.hadoop.com:
+acadgild.hadoop.com: starting secondarynamenode, logging to /usr/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hduser-secondarynamenode-acadgild.hadoop.com.out
+starting jobtracker, logging to /usr/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hduser-jobtracker-acadgild.hadoop.com.out
+acadgild.hadoop.com: Warning: $HADOOP_HOME is deprecated.
+acadgild.hadoop.com:
+acadgild.hadoop.com: starting tasktracker, logging to /usr/hadoop/hadoop-1.2.1/libexec/../logs/hadoop-hduser-tasktracker-acadgild.hadoop.com.out
+[hduser@acadgild root]$ jps
+2176 DataNode
+2370 JobTracker
+2293 SecondaryNameNode
+2074 NameNode
+2524 Jps
+2479 TaskTracker
+[hduser@acadgild root]$
