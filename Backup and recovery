@@ -1,0 +1,56 @@
+[hduser@acadgild ~]$ hadoop dfs -put test1.txt test2.txt /
+Warning: $HADOOP_HOME is deprecated.
+
+[hduser@acadgild ~]$ hadoop dfs -ls /
+Warning: $HADOOP_HOME is deprecated.
+
+Found 3 items
+-rw-r--r--   1 hduser supergroup          0 2016-08-12 10:16 /test1.txt
+-rw-r--r--   1 hduser supergroup          0 2016-08-12 10:16 /test2.txt
+drwxr-xr-x   - hduser supergroup          0 2016-08-10 12:04 /usr
+[hduser@acadgild logs]$ hadoop dfsadmin -safemode get
+Warning: $HADOOP_HOME is deprecated.
+
+Safe mode is OFF
+[hduser@acadgild logs]$ hadoop dfsadmin -safemode enter
+Warning: $HADOOP_HOME is deprecated.
+
+Safe mode is ON
+[hduser@acadgild logs]$ hadoop dfsadmin -metasave test_backup.log
+Warning: $HADOOP_HOME is deprecated.
+
+Created file test_backup.log on server hdfs://acadgild.hadoop.com:54310
+[hduser@acadgild logs]$ cat test_backup.lo
+cat: test_backup.lo: No such file or directory
+[hduser@acadgild logs]$ cat test_backup.log
+9 files and directories, 1 blocks = 10 total
+Live Datanodes: 1
+Dead Datanodes: 0
+Metasave: Blocks waiting for replication: 0
+Metasave: Blocks being replicated: 0
+Metasave: Blocks 0 waiting deletion from 0 datanodes
+Metasave: Number of datanodes: 1
+192.168.237.128:50010 IN 18746441728(17.46 GB) 20480(20 KB) 0% 17011261440(15.84 GB) Fri Aug 12 10:33:31 EDT 2016
+[hduser@acadgild logs]$ hadoop dfsadmin -safemode leave
+Warning: $HADOOP_HOME is deprecated.
+
+Safe mode is OFF
+[hduser@acadgild logs]$ hadoop balancer
+Warning: $HADOOP_HOME is deprecated.
+
+Time Stamp               Iteration#  Bytes Already Moved  Bytes Left To Move  Bytes Being Moved
+16/08/12 10:42:31 INFO net.NetworkTopology: Adding a new node: /default-rack/192.168.237.128:50010
+16/08/12 10:42:31 INFO balancer.Balancer: 0 over utilized nodes:
+16/08/12 10:42:31 INFO balancer.Balancer: 1 under utilized nodes:  192.168.237.128:50010
+The cluster is balanced. Exiting...
+Balancing took 954.0 milliseconds
+[hduser@acadgild logs]$ hadoop balancer -threshold 15
+Warning: $HADOOP_HOME is deprecated.
+
+16/08/12 10:43:41 INFO balancer.Balancer: Using a threshold of 15.0
+Time Stamp               Iteration#  Bytes Already Moved  Bytes Left To Move  Bytes Being Moved
+16/08/12 10:43:42 INFO net.NetworkTopology: Adding a new node: /default-rack/192.168.237.128:50010
+16/08/12 10:43:42 INFO balancer.Balancer: 0 over utilized nodes:
+16/08/12 10:43:42 INFO balancer.Balancer: 1 under utilized nodes:  192.168.237.128:50010
+The cluster is balanced. Exiting...
+Balancing took 777.0 milliseconds
