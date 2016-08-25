@@ -1,0 +1,21 @@
+[hduser@yarn etc]$ start-all.sh
+This script is Deprecated. Instead use start-dfs.sh and start-yarn.sh
+16/08/25 14:47:42 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting namenodes on [yarn.hadoop.com]
+yarn.hadoop.com: Warning: Permanently added the ECDSA host key for IP address '192.168.8.102' to the list of known hosts.
+yarn.hadoop.com: starting namenode, logging to /usr/hadoop/hadoop-2.7.2/logs/hadoop-hduser-namenode-yarn.hadoop.com.out
+yarn.hadoop.com: starting datanode, logging to /usr/hadoop/hadoop-2.7.2/logs/hadoop-hduser-datanode-yarn.hadoop.com.out
+Starting secondary namenodes [0.0.0.0]
+0.0.0.0: starting secondarynamenode, logging to /usr/hadoop/hadoop-2.7.2/logs/hadoop-hduser-secondarynamenode-yarn.hadoop.com.out
+16/08/25 14:48:11 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+starting yarn daemons
+starting resourcemanager, logging to /usr/hadoop/hadoop-2.7.2/logs/yarn-hduser-resourcemanager-yarn.hadoop.com.out
+yarn.hadoop.com: starting nodemanager, logging to /usr/hadoop/hadoop-2.7.2/logs/yarn-hduser-nodemanager-yarn.hadoop.com.out
+[hduser@yarn etc]$ jps
+3248 ResourceManager
+3559 Jps
+2808 NameNode
+3352 NodeManager
+3097 SecondaryNameNode
+2906 DataNode
+[hduser@yarn etc]$
